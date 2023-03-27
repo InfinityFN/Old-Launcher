@@ -1,0 +1,79 @@
+﻿<Window x:Class="Infinity.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Infinity"
+        mc:Ignorable="d"
+        Title="Infinity" Height="437" Width="748" Loaded="Home_Loaded" Closing="Home_Closing">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="#F2F2F2"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#E2E2E2"/>
+                    <Setter Property="BorderBrush" Value="#007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="#F2F2F2"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#E2E2E2"/>
+                    <Setter Property="BorderBrush" Value="#007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="BorderBrush" Value="#007ACC"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF101010">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Welcome," HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="14"/>
+        <Image x:Name="AthenaIcon" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" VerticalAlignment="Top" Width="56" Stretch="Fill"/>
+        <Label x:Name="UsernameBox" Content="{}{username}" HorizontalAlignment="Left" Margin="68,29,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="14"/>
+        <Image HorizontalAlignment="Center" Height="70" VerticalAlignment="Top" Width="266" Source="/LogoTransparent (1).png" Stretch="Fill" Margin="0,162,0,0"/>
+        <Label Content="Online:" HorizontalAlignment="Left" Margin="300,0,0,11" VerticalAlignment="Bottom" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="14"/>
+        <Label x:Name="OnlineCounter" Content="0" HorizontalAlignment="Left" Margin="347,0,0,10" VerticalAlignment="Bottom" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="14"/>
+        <Button x:Name="RePlayerbtn" Content="Refresh Player Count" HorizontalAlignment="Left" Margin="300,0,0,41" VerticalAlignment="Bottom" Width="141" Height="25"/>
+        <Button x:Name="SettingsBtn" Content="Settings" HorizontalAlignment="Right" Margin="0,284,383,0" VerticalAlignment="Top" Width="124" Height="30" Background="#FFA54783" BorderBrush="#FFCC00A8" Click="SettingsBtn_Click"/>
+        <Button x:Name="LaunchFNBtn" Content="Launch Fortnite" HorizontalAlignment="Center" Margin="0,237,0,0" VerticalAlignment="Top" Height="42" Width="160" BorderBrush="#FF37FF01" Background="#FF1FE40F" IsCancel="True" ButtonBase.Click="LaunchFNBtn_Click"/>
+        <Button x:Name="LaunchFNBtn_Copy" Content="View your Locker" HorizontalAlignment="Left" Margin="374,282,0,0" VerticalAlignment="Top" Height="34" Width="124" BorderBrush="#FF0105FF" Background="#FF0F43E4" IsCancel="True" RenderTransformOrigin="0.531,0.642"/>
+        <Image HorizontalAlignment="Left" Height="35" Margin="600,10,0,0" VerticalAlignment="Top" Width="34" Source="/Icon_VBucks.png"/>
+        <Label x:Name="VbucksCounter" Content="000,000,000" HorizontalAlignment="Left" Margin="639,14,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Franklin Gothic Demi Cond" FontSize="14"/>
+
+    </Grid>
+</Window>

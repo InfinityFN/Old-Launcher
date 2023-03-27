@@ -1,0 +1,71 @@
+﻿<Window x:Class="Infinity.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Infinity"
+        mc:Ignorable="d"
+        Title="Infinity" Height="437" Width="748" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="#F2F2F2"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#E2E2E2"/>
+                    <Setter Property="BorderBrush" Value="#007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="#F2F2F2"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="MinHeight" Value="32"/>
+            <Setter Property="MinWidth" Value="120"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="#E2E2E2"/>
+                    <Setter Property="BorderBrush" Value="#007ACC"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="BorderBrush" Value="#007ACC"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#FF101010">
+        <TextBox x:Name="FortnitePathBox" HorizontalAlignment="Left" Margin="25,33,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="585" RenderTransformOrigin="-0.754,-1.677"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="653,30,0,0" VerticalAlignment="Top" Height="38" Width="56" Click="Button_Click"/>
+        <Button x:Name="FNPathFinderBtn" Content="..." HorizontalAlignment="Left" Margin="610,30,0,0" VerticalAlignment="Top" Height="38" Width="37" Background="#FF626B71" BorderBrush="#FF676767" Click="FNPathClick"/>
+        <Label Content="Fortnite Path:" HorizontalAlignment="Left" Margin="20,7,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <RadioButton x:Name="FortniteConsole" Content="Inject Console" HorizontalAlignment="Left" Margin="25,93,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Checked="FortniteConsoleCheck" Unchecked="FortniteConsoleUncheck"/>
+        <Button x:Name="SaveConfigBtn" Content="Save Configuration" HorizontalAlignment="Left" Margin="155,0,0,10" VerticalAlignment="Bottom" Height="31" Width="188" Click="SaveConfigBtn_Click"/>
+        <Button x:Name="ResetConfigBtn" Content="Reset Configuration" HorizontalAlignment="Left" Margin="399,0,0,10" VerticalAlignment="Bottom" Height="31" Width="188" Background="Red" BorderBrush="#FFA22222" Click="ResetConfigBtn_Click"/>
+
+    </Grid>
+</Window>
